@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 2000px !important;
+            height: 800px;
+            position: relative;
+            background: url("bg.jpg");
+            /* background-repeat:  */
+            background-size: contain;
+
+            /* background  */
+            /* padding:  5rem; */
+
+        }
+        .car {
+            position: absolute;
+            top: 500px;
+            width: 300px;
+            height: 100px;
+            animation: an 2s infinite linear alternate-reverse;
+        }
+        .wheel{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top : 550px;
+            animation: rt 2s infinite linear alternate-reverse ;
+        }
+        .wheel-1{
+           
+            left: 30px;
+        }
+        .wheel-2{
+            left: 210px;
+        }
+
+         @keyframes an {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(2000px)
+            }
+        }
+        @keyframes rt {
+            0% {
+                transform:  rotate(0deg);
+            }
+            25% {
+                transform: translateX(500px) rotateZ(222deg);
+            }
+            50%{
+                transform: translateX(1000px) rotateZ(440deg);       
+            }
+            75%{
+                transform: translateX(1500px) rotateZ(5450deg);
+            }
+            100% {
+                transform: translateX(2000px) rotateZ(9220deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img  class="car" src="Orange_sport_car.svg.png" alt="">
+        <img  class="wheel wheel-1" src="wheel.png" alt="">
+        <img  class="wheel wheel-2" src="wheel.png" alt="">
+    </div>
+</body>
+</html>
